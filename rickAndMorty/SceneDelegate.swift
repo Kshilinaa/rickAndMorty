@@ -8,21 +8,45 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
-
+    
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-       
+        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let launchSreenVC = LaunchScreenViewController()
+       // let launchSreenVC = EpisodesViewController()
         
-        window = UIWindow(windowScene: windowScene)
+     //   let episodesVS = EpisodesViewController()
+        
+    //    let navigationController = UINavigationController(rootViewController: episodesVS)
+        
+      /* window = UIWindow(windowScene: windowScene)
         window?.rootViewController = launchSreenVC
-        window?.makeKeyAndVisible()
+        window?.makeKeyAndVisible() */
+        
+        let loadingViewController = LaunchScreenViewController()
+            let mainTabBarController = MainTabBarController()
+
+            window = UIWindow(windowScene: windowScene)
+            window?.rootViewController = loadingViewController
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.window?.rootViewController = mainTabBarController
+            }
+
+            window?.makeKeyAndVisible()
+        }
+
+        
+        
     }
 
+ 
+
+    
+    
     func sceneDidDisconnect(_ scene: UIScene) {
        
     }
@@ -44,5 +68,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
-}
+
 
