@@ -28,7 +28,6 @@ class EpisodesViewController: UIViewController {
         collectionView.register(LogoCollectionViewCell.self, forCellWithReuseIdentifier: "Logo")
         collectionView.register(EpisodeCollectionViewCell.self, forCellWithReuseIdentifier: "Episode")
         
-       // dataSourse?.reload(sectionModels: sectionModel)
         
         getEpisodes()
         

@@ -13,7 +13,6 @@ class EpisodeCollectionViewCell: UICollectionViewCell {
     let episodeImage = UIImageView()
     let nameEpisodelabel = UILabel()
     let playEpisodeImage = UIImageView()
-    // let likeEpisodeImage = UIImageView()
     let numberEpisodeLabel = UILabel()
     let cellBackGroundView = UIView()
     let likeButton = UIButton(type: .custom)
@@ -62,12 +61,6 @@ class EpisodeCollectionViewCell: UICollectionViewCell {
         
         let episodeImageXpos = bounds.width - 50
         
-        /*  likeEpisodeImage.frame = CGRect(x: episodeImageXpos, y: 0, width: 41, height: 36)
-         likeEpisodeImage.center.y = 35
-         likeEpisodeImage.image = UIImage(systemName: "heart")
-         //
-         likeEpisodeImage.tintColor = UIColor(named: "heartColor")
-         cellBackGroundView.addSubview(likeEpisodeImage) */
         
         likeButton.frame = CGRect(x: episodeImageXpos, y: 0, width: 41, height: 36)
         likeButton.center.y = 35
